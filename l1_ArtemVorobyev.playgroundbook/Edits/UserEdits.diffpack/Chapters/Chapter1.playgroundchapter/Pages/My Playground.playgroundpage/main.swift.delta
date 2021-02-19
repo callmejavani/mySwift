@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//Нахождение дискриминанта
+import Foundation
+var a:Double = 1
+var b:Double = -6
+var c:Double = -7
+var radical1:Double = 0
+var radical2:Double = 0 
+
+let discr = (b*b) - (4 * a * c)
+
+if (discr &gt; 0) {
+    radical1 = -b + sqrt(discr) / (2 * a)
+    radical1 = -b - sqrt(discr) / (2 * a)
+    print("У Уравнения 2 корня: x1 = \(radical1), х2 = \(radical2)")
+}else if (discr == 0) {
+    radical1 = -b / 2 * a
+    print("У Уравнения 1 корень: x1 = \(radical1)")
+}else {
+    print("Корней нет")
+}
+
+// Поиск площади, пермитра и гипотенузы треугольника
+let leg1:Double = 5
+let leg2:Double = 10
+var hypotenuse = sqrt((leg1*leg1)+(leg2*leg2))
+print(hypotenuse)
+print("Гипотенуза равна: \(hypotenuse)")
+var perimeter = leg1 + leg2 + hypotenuse
+print("Периметр равен: \(perimeter)")
+var square = (leg1 * leg2) / 2
+print("Площадь равна: \(square)")
+
+    // Задание на проценты
+var sum:Double = 200
+var procent:Double = 10
+sum = sum + (sum * procent / 100)
+sum += (sum * procent / 100)
+sum += (sum * procent / 100)
+sum += (sum * procent / 100)
+sum += (sum * procent / 100)
+print("Через 5 лет сумма составит: \(sum)")
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1099}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
