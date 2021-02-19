@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import Foundation
+// Функция на четность числа
+
+func evenNumber(c: Int) {
+    if (c % 2 == 0) {
+        print("Число четное")
+    }else {
+        print("Число нечетное")
+    }
+}
+evenNumber(c: 6)
+
+    //Функция деления на 3
+func divisionNumber(a:Int) {
+    if (a % 3 == 0) {
+        print("Число делится на 3 без остатка")
+    }else {
+        print("Число делится на 3 с остатком")
+    }
+}
+divisionNumber(a: 39)
+
+    //Возрастаюющий массив
+var numbers = Array (1...100)
+print(numbers)
+
+    //Сортировка массива 
+var arr = [Int]()
+for i in 1...100 {
+    if (i % 2 == 0 &amp;&amp; i % 3 == 0) {
+        arr.append(i)
+    }
+}
+print(arr)
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 626}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
