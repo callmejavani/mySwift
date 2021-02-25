@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import Foundation
+
+enum Engine:String{
+    case On = "Заведен"
+    case Off = "Заглушен"
+}
+
+enum Window:String {
+    case Close = "Открыты"
+    case Open = "Закрыты"
+}
+
+struct SportCar {
+    var mark:String
+    var age:Int
+    var trunkVolume:Int
+    var openWindow:String
+    var startEngine:String
+    var fullVolumeTrunk:Int
+    
+    init(markName:String, carAge:Int, trunkVolume:Int, openWindow:String, startEngine:String, fullVolumeTrunk:Int){
+        self.mark = markName
+        self.age = carAge
+        self.trunkVolume = trunkVolume
+        self.openWindow = openWindow
+        self.startEngine = startEngine
+        self.fullVolumeTrunk = fullVolumeTrunk
+    }
+    
+    func getInfo()  {
+        print ("Марка машины: \(mark), год выпуска: \(age), объем багажника: \(trunkVolume), окна: \(statusWindow.rawValue) , двигатель: \(statusEngine.rawValue), заполненный объем багажника \(fullVolumeTrunk)")
+    }
+    
+    var statusEngine:Engine = .On
+    mutating func changeEngine(action: Engine) {
+        switch action {
+        case .Off:
+            self.statusEngine = .Off
+        case .On:
+            self.statusEngine = .On
+        }
+    }
+    
+    var statusWindow:Window = .Open
+    mutating func changeWindow(action: Window) {
+        switch action {
+        case .Open:
+            self.statusWindow = .Open 
+        case .Close:
+            self.statusWindow = .Close
+        }
+    }
+    
+}
+
+struct TrunkCar {
+    var mark: String
+    var age: Int 
+    var trunkVolume: Int 
+    var openWindow: String 
+    var startEngine: String 
+    var fullVolumeTrunk: Int
+}
+
+enum Action {
+    enum Loading {
+        case Load(load:Int)
+        case Unload(unload:Int)
+    }
+}
+
+var bmw = SportCar (markName: "bmw", carAge: 2020, trunkVolume: 30, openWindow: "yes", startEngine: "yes", fullVolumeTrunk: 20)
+//var trunkCar:TrunkCar = TrunkCar(mark: "gaz", age: 40, trunkVolume: 30, openWindow: "no", startEngine: "no", fullVolumeTrunk: 90)
+print(bmw.getInfo())
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1969}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
