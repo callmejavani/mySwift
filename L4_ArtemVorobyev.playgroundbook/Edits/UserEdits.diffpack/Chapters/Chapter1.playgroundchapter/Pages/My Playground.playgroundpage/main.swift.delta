@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import Foundation
+
+class Car {
+    
+    enum EngineStatus:CustomStringConvertible{
+        case on, off
+        var description: String {
+            switch self {
+            case .on:
+                return "Двигатель заведен"
+            case .off:
+                return "Двигатель выключен"
+            }
+        }
+    }
+    
+    enum WindowStatus: CustomStringConvertible {
+        case close, open
+        var description: String {
+            switch self {
+            case .close:
+                return "Окна закрыты" 
+            case .open:
+                return "Окна открыты"
+            }
+        }
+    }
+    
+    enum SportCarSpoilerStatus: CustomStringConvertible {
+        case raised, omitted
+        var description: String {
+            switch self {
+            case .raised:
+                return "Спойлер поднят" 
+                case .omitted:
+                    return "Спойлер опущен"
+            }
+        }
+    }
+    
+    enum TrunkCarTypeOfBody: CustomStringConvertible {
+        case eurotruck, jumbo, refrigerator
+        var description: String {
+            switch self {
+            case .eurotruck:
+                return "Кузов типа Еврофура"
+                case .jumbo:
+                    return "Кузов типа Джамбо"
+                    case .refrigerator:
+                        return "Кузов типа Холодильной камеры"
+            }
+        }
+    }
+    
+    enum Actions {
+        case changeEngine(EngineStatus)
+        case changeWindow(WindowStatus)
+        case changeSpoiler(SportCarSpoilerStatus)
+        case TypeTrunkCar(TrunkCarTypeOfBody)
+    }
+    
+    
+    
+    var engine: EngineStatus = .on
+    var window: WindowStatus = .close
+    var spoiler: SportCarSpoilerStatus = .omitted
+    var typeTrunk: TrunkCarTypeOfBody = .eurotruck
+    var mark: String  
+    var age: Int 
+    
+    init(mark:String, age: Int) {
+        self.mark = mark
+        self.age = age
+    }
+    
+    func perform(action: Actions) {
+        
+    }
+}
+
+class SportCar: Car, CustomStringConvertible{
+    var maxSpeed: Int
+    
+    var description: String {
+        return "Легкоовой автомобиль, марка машины: \(mark), год выпуска: \(age), \(spoiler), \(engine), \(window), Максимальная скорость: \(maxSpeed)"
+    }
+    
+    init(mark:String, age: Int, maxSpeed: Int) {
+        self.maxSpeed = maxSpeed
+        super.init(mark:mark, age: age)
+    }
+    
+    override func perform(action:Actions) {
+        switch action {
+        case .changeEngine(let status):
+            engine = status
+        case .changeWindow(let status):
+            window = status
+        case .changeSpoiler(let status):
+            spoiler = status
+        default:
+            break 
+        }
+    }
+}
+
+class TrunkCar: Car, CustomStringConvertible {
+    var widthWheel:Double
+        
+    var description: String {
+        return "Грузовой автомобиль, марка машины: \(mark), год выпуска: \(age), Ширина колес \(widthWheel), Тип кузова: \(typeTrunk), \(engine), \(window)"
+    }
+    
+    init(mark:String, age: Int, widthWheel: Double){
+        self.widthWheel = widthWheel
+        super.init(mark:mark, age: age)
+    }
+    
+    override func perform(action:Actions) {
+        switch action {
+        case .changeEngine(let status):
+            engine = status
+        case .changeWindow(let status):
+            window = status
+        case .TypeTrunkCar(let type):
+            typeTrunk = type
+        default:
+            break 
+        }
+    }
+    
+    
+}
+
+var bmw = SportCar(mark: "audi", age: 2020, maxSpeed: 100)
+bmw.perform(action: .changeEngine(.off))
+bmw.perform(action: .changeSpoiler(.raised))
+bmw.perform(action: .changeWindow(.close))
+print(bmw)
+
+
+var vaz = TrunkCar(mark: "vaz", age: 2020, widthWheel: 15.5)
+vaz.perform(action: .TypeTrunkCar(.jumbo))
+vaz.perform(action: .changeEngine(.off))
+vaz.perform(action: .changeWindow(.close))
+print(vaz)
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 3865}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
