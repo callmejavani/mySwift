@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import Foundation
+
+enum EngineStatus:CustomStringConvertible{
+    case on, off
+    var description: String {
+        switch self {
+        case .on:
+            return "Двигатель заведен"
+        case .off:
+            return "Двигатель заглушен"
+        }
+    }
+}
+
+enum WindowStatus: CustomStringConvertible {
+    case close, open
+    var description: String {
+        switch self {
+        case .close:
+            return "Окна закрыты" 
+        case .open:
+            return "Окна открыты"
+        }
+    }
+}
+
+enum ActionsWindow {
+    case changeWindow(WindowStatus)
+}
+
+enum Actions {
+    case changeEngine(EngineStatus)
+}
+
+protocol Car {
+    
+    var mark: String {get set}
+    var age: Int {get set}
+    
+    func perform(action: Actions)
+}
+
+extension Car {
+    func switchWindow(action:ActionsWindow) {}
+}
+
+class SportCar: Car, CustomStringConvertible {
+    
+    func perform(action:Actions) {
+        switch action {
+        case .changeEngine(let status):
+            engine = status
+        default:
+            break 
+        }
+    }
+    
+    func switchWindow(action:ActionsWindow) {
+        switch action {
+        case .changeWindow(let status):
+            window = status
+        }
+    }
+    
+    var engine: EngineStatus = .on
+    var window: WindowStatus = .close
+
+    var mark: String 
+    var age: Int 
+    var acceleration: Int
+    
+    var description: String {
+        return "Легковой автомобиль, марка машины: \(mark), год выпуска: \(age), разгон с 0-100км/ч: \(acceleration)с, \(engine), \(window)"
+    }
+    
+    init(mark:String, age:Int, acceleration:Int){
+        self.mark = mark
+        self.age = age
+        self.acceleration = acceleration
+    }
+}
+    
+
+class TrunkCar: Car, CustomStringConvertible {
+
+    var engine: EngineStatus = .on
+    var window: WindowStatus = .close
+    
+    var mark: String 
+    var age: Int 
+    var capacity: Int
+    
+    var description: String {
+        return "Грузовой автомобиль, марка машины: \(mark), год выпуска: \(age), емкость кузова: \(capacity), \(engine), \(window)"
+    }
+    
+    init(mark:String, age:Int, capacity: Int){
+        self.mark = mark
+        self.age = age
+        self.capacity = capacity
+    }
+    
+    func perform(action:Actions) {
+        switch action {
+        case .changeEngine(let status):
+            engine = status
+        default:
+            break 
+        }
+    }
+    
+    func switchWindow(action:ActionsWindow) {
+        switch action {
+        case .changeWindow(let status):
+            window = status
+        }
+    }
+}
+
+var bmw = SportCar(mark: "bmw", age: 2000, acceleration: 10)
+bmw.perform(action: .changeEngine(.off))
+bmw.switchWindow(action: .changeWindow(.close))
+print(bmw)
+
+var vaz = TrunkCar (mark: "vaz", age: 2020, capacity: 40)
+vaz.perform(action: .changeEngine(.on))
+vaz.switchWindow(action: .changeWindow(.open))
+print(vaz)
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 2854}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
