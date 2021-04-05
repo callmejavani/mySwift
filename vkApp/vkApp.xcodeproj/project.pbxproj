@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5259D64A261B8B4E00ACA0DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259D649261B8B4E00ACA0DE /* LoginViewController.swift */; };
+		5259D64E261B99C700ACA0DE /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259D64D261B99C700ACA0DE /* CollectionViewController.swift */; };
+		5259D651261B99DB00ACA0DE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259D650261B99DB00ACA0DE /* TableViewController.swift */; };
 		52730D522613335600FC8628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52730D512613335600FC8628 /* AppDelegate.swift */; };
 		52730D542613335600FC8628 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52730D532613335600FC8628 /* SceneDelegate.swift */; };
-		52730D562613335600FC8628 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52730D552613335600FC8628 /* ViewController.swift */; };
 		52730D592613335600FC8628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52730D572613335600FC8628 /* Main.storyboard */; };
 		52730D5B2613335A00FC8628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52730D5A2613335A00FC8628 /* Assets.xcassets */; };
 		52730D5E2613335A00FC8628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52730D5C2613335A00FC8628 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5259D649261B8B4E00ACA0DE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../../../../.Trash/LoginViewController.swift; sourceTree = "<group>"; };
+		5259D64D261B99C700ACA0DE /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		5259D650261B99DB00ACA0DE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		52730D4E2613335600FC8628 /* vkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52730D512613335600FC8628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52730D532613335600FC8628 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52730D552613335600FC8628 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52730D582613335600FC8628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52730D5A2613335A00FC8628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52730D5D2613335A00FC8628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,7 +74,9 @@
 		52730D66261333E900FC8628 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				52730D552613335600FC8628 /* ViewController.swift */,
+				5259D649261B8B4E00ACA0DE /* LoginViewController.swift */,
+				5259D64D261B99C700ACA0DE /* CollectionViewController.swift */,
+				5259D650261B99DB00ACA0DE /* TableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52730D562613335600FC8628 /* ViewController.swift in Sources */,
+				5259D64E261B99C700ACA0DE /* CollectionViewController.swift in Sources */,
 				52730D522613335600FC8628 /* AppDelegate.swift in Sources */,
+				5259D64A261B8B4E00ACA0DE /* LoginViewController.swift in Sources */,
+				5259D651261B99DB00ACA0DE /* TableViewController.swift in Sources */,
 				52730D542613335600FC8628 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
